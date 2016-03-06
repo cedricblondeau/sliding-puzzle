@@ -4,4 +4,20 @@ body {
 
 #app {
   padding: 25px;
+
+  #game {
+    margin: auto;
+    width: 450px;
+
+    #grid {
+      
+      .tile {
+        width: 150px;
+        border: none;
+        display: inline-block;
+        cursor: pointer;
+        vertical-align: top;
+      }
+    }
+  }
 }
