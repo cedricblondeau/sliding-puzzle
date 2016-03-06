@@ -1,4 +1,11 @@
 {
   "name": "sliding-puzzle",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "js-priority-queue": "^0.1.5",
+    "lodash": "^4.6.1"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  }
 }
