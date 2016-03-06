@@ -7,6 +7,7 @@ http://cedricblondeau.github.io/sliding-puzzle/
 ## Solver algorithm
 The application use [A* search algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm) with [Manhattan distance](https://en.wikipedia.org/wiki/Taxicab_geometry) heuristic to solve puzzles.
 The algorithm solves 3x3 puzzles and simple 4x4 puzzles in a few milliseconds but will struggle with more complex 4x4 ones.
+
 See [app/js/models/solver.js](app/js/models/solver.js).
 
 To solve 4x4 puzzles, [Iterative_deepening_A*](https://en.wikipedia.org/wiki/Iterative_deepening_A*) and a heuristic such as [pattern database](https://heuristicswiki.wikispaces.com/pattern+database) could be used.
