@@ -3,7 +3,23 @@
   "private": true,
   "dependencies": {
     "js-priority-queue": "^0.1.5",
-    "lodash": "^4.6.1"
+    "lodash": "^4.6.1",
+    "normalize.css": "^3.0.3",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  },
+  "devDependencies": {
+    "babelify": "^7.2.0",
+    "browser-sync": "^2.11.1",
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3",
+    "reactify": "^1.1.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
   },
   "engines": {
     "node": ">=4.0.0"
