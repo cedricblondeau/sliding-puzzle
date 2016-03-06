@@ -7,17 +7,40 @@ body {
 
   #game {
     margin: auto;
-    width: 450px;
+    width: 670px;
 
     #grid {
-      
+      display: inline-block;
+      width: 450px;
+      margin-right: 20px;
+
       .tile {
         width: 150px;
         border: none;
         display: inline-block;
         cursor: pointer;
-        vertical-align: top;
+        vertical-align:top;
+      }
+    }
+
+    #aside {
+      vertical-align: top;
+      display: inline-block;
+      width: 200px;
+
+      button {
+        display: block;
+        width: 100%;
+        background: #FFFFFF;
+        border: solid 1px;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      button[disabled] {
+        color: grey;
       }
     }
   }
 }
+
