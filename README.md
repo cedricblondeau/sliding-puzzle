@@ -5,7 +5,7 @@ A sliding puzzle with a solver written in JavaScript using ReactJS for the view 
 http://cedricblondeau.github.io/sliding-puzzle/
 
 ## Solver algorithm
-The application use [A* search algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm) with [Manhattan distance](https://en.wikipedia.org/wiki/Taxicab_geometry) heuristic to solve puzzles.
+The application uses [A* search algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm) with [Manhattan distance](https://en.wikipedia.org/wiki/Taxicab_geometry) heuristic to solve puzzles.
 The algorithm solves 3x3 puzzles and some simple 4x4 puzzles in a few milliseconds but is unsuitable for more complex 4x4 ones.
 
 See [app/js/models/solver.js](app/js/models/solver.js).
