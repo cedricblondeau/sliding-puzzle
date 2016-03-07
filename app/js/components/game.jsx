@@ -1,6 +1,7 @@
 var React = require('react');
-var Menu = require('./menu.jsx');
 var Grid = require('./grid.jsx');
+var Menu = require('./menu.jsx');
+var Scoreboard = require('./scoreboard.jsx');
 var GridModel = require('../models/grid');
 var SolverModel = require('../models/solver');
 
@@ -20,7 +21,8 @@ var Game = React.createClass({
         gridModelInstance = GridModel.buildFromSize(3);
         return {
             gridModel: gridModelInstance,
-            gridId: 1
+            gridId: 1,
+            moves: 0
         };
     },
 
@@ -30,7 +32,8 @@ var Game = React.createClass({
         solution = null;
         this.setState({
             gridModel: gridModelInstance,
-            gridId: this.state.gridId + 1
+            gridId: this.state.gridId + 1,
+            moves: 0
         });
     },
 
@@ -41,15 +44,9 @@ var Game = React.createClass({
             }
             if (solution && solution.length > 0) {
                 var direction = solution.shift();
-                gridModelInstance.move(direction);
-                this.state.gridModel = gridModelInstance;
-                this.setState(this.state);
+                this.move(direction);
             }
         }
-    },
-
-    isSolving: function() {
-        return timeouts.length ? true : false;
     },
 
     solve: function() {
@@ -63,9 +60,7 @@ var Game = React.createClass({
                 for (var i = 0; i < solution.length; i++) {
                     (function(n) {
                         timeouts.push(setTimeout(function() {
-                            gridModelInstance.move(solution[n]);
-                            game.state.gridModel = gridModelInstance;
-                            game.setState(game.state);
+                            game.move(solution[n]);
                         }, delay));
                     } (i));
                     delay = delay + 100;
@@ -74,12 +69,24 @@ var Game = React.createClass({
         }
     },
 
+    isSolving: function() {
+        return timeouts.length ? true : false;
+    },
+
+    move: function(direction) {
+        gridModelInstance.move(direction);
+        this.state.gridModel = gridModelInstance;
+        this.state.moves++;
+        this.setState(this.state);
+    },
+
     moveTile: function(position) {
         if (!this.isSolving()) {
             var changed = gridModelInstance.moveTile(position);
             if (changed) {
                 solution = null;
                 this.state.gridModel = gridModelInstance;
+                this.state.moves++;
                 this.setState(this.state);
             }
         }
@@ -90,6 +97,7 @@ var Game = React.createClass({
             <div id="game">
                 <Grid key={this.state.gridId} model={this.state.gridModel} moveTile={this.moveTile} />
                 <div id="aside">
+                    <Scoreboard moves={this.state.moves} gridId={this.state.gridId} />
                     <Menu next={this.next} hint={this.hint} solve={this.solve} isSolved={this.state.gridModel.isSolved()} />
                 </div>
             </div>

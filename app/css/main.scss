@@ -1,5 +1,14 @@
+$backgroundColor: #e8e8e8;
+$textColor: #000000;
+$primaryColor: #A8A8A8;
+$accentColor: #FFFFFF;
+
 body {
-  background: #e8e8e8;
+  background: $backgroundColor;
+  color: $textColor;
+  font-family: "Open Sans", "Arial", "Helvetica";
+  font-weight: 300;
+  font-size: 1em;
 }
 
 #app {
@@ -28,17 +37,45 @@ body {
       display: inline-block;
       width: 200px;
 
-      button {
-        display: block;
-        width: 100%;
-        background: #FFFFFF;
-        border: solid 1px;
-        padding: 20px;
-        text-align: center;
-        margin-bottom: 15px;
+      #scoreboard {
+
+        .block {
+          background: $primaryColor;
+          border: none;
+          text-align: center;
+          margin-bottom: 15px;
+          border-radius: 4px;
+          padding: 5px;
+
+          label {
+            display: block;
+            text-transform: uppercase;
+            color: $accentColor;
+            font-weight: bold;
+            font-size: 1.2em;
+          }
+          span {
+            display: block;
+            color: $accentColor;
+            font-weight: bold;
+            font-size: 1.5em;
+          }
+        }
       }
-      button[disabled] {
-        color: grey;
+
+      #menu {
+        button {
+          display: block;
+          width: 100%;
+          background: $accentColor;
+          border: solid 1px;
+          padding: 20px;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+        button[disabled] {
+          color: grey;
+        }
       }
     }
   }
