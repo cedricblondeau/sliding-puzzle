@@ -1,5 +1,6 @@
 var React = require('react');
 var Tile = require('./tile.jsx');
+var FlipMove = require('react-flip-move');
 
 var images = [
     '//i.giphy.com/26FPCXdkvDbKBbgOI.gif',
@@ -58,6 +59,7 @@ var Grid = React.createClass({
 
                 return (
                     <div id="grid">
+                        <FlipMove duration="100">
                         {this.props.model.tiles.map(function(number, currentPosition) {
                             var drawImage = number ? true : false;
                             var expectedPosition = number - 1;
@@ -71,6 +73,7 @@ var Grid = React.createClass({
                                            height={tileHeight}
                                            click={this.tileClick} /> );
                         }, this)}
+                        </FlipMove>
                     </div>
                 );
             }
