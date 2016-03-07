@@ -354,7 +354,11 @@ th {
   padding: 0; }
 
 body {
-  background: #e8e8e8; }
+  background: #e8e8e8;
+  color: #000000;
+  font-family: "Open Sans", "Arial", "Helvetica";
+  font-weight: 300;
+  font-size: 1em; }
 
 #app {
   padding: 25px; }
@@ -375,7 +379,25 @@ body {
       vertical-align: top;
       display: inline-block;
       width: 200px; }
-      #app #game #aside button {
+      #app #game #aside #scoreboard .block {
+        background: #A8A8A8;
+        border: none;
+        text-align: center;
+        margin-bottom: 15px;
+        border-radius: 4px;
+        padding: 5px; }
+        #app #game #aside #scoreboard .block label {
+          display: block;
+          text-transform: uppercase;
+          color: #FFFFFF;
+          font-weight: bold;
+          font-size: 1.2em; }
+        #app #game #aside #scoreboard .block span {
+          display: block;
+          color: #FFFFFF;
+          font-weight: bold;
+          font-size: 1.5em; }
+      #app #game #aside #menu button {
         display: block;
         width: 100%;
         background: #FFFFFF;
@@ -383,5 +405,5 @@ body {
         padding: 20px;
         text-align: center;
         margin-bottom: 15px; }
-      #app #game #aside button[disabled] {
+      #app #game #aside #menu button[disabled] {
         color: grey; }
