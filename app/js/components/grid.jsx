@@ -3,7 +3,15 @@ var Tile = require('./tile.jsx');
 
 var images = [
     'http://i.giphy.com/26FPCXdkvDbKBbgOI.gif',
-    'http://i.giphy.com/13CoXDiaCcCoyk.gif'
+    'http://i.giphy.com/13CoXDiaCcCoyk.gif',
+    'http://i.giphy.com/xWlPqPbrlkEQU.gif',
+    'http://i.giphy.com/QPDVAzBOnShLq.gif',
+    'http://i.giphy.com/13FJKNTaIiZ2lG.gif',
+    'http://i.giphy.com/5ZdCsQHEoCUBq.gif',
+    'http://i.giphy.com/BeGJ3IXngxyeY.gif',
+    'http://i.giphy.com/LhenEkp5EsPJe.gif',
+    'http://i.giphy.com/3o6UB65bfF8P1anIZ2.gif',
+    'http://i.giphy.com/l0NwLUVdksjwmtgLC.gif'
 ];
 
 var Grid = React.createClass({
