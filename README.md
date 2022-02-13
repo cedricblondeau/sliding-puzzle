@@ -1,5 +1,6 @@
 # sliding-puzzle
-A sliding puzzle with a solver written in JavaScript using ReactJS for the view part and cat GIFs as your rewards.
+
+A ReactJS sliding puzzle with a solver and cat GIFs as your rewards.
 
 [![forthebadge](http://forthebadge.com/images/badges/contains-cat-gifs.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com)
 
