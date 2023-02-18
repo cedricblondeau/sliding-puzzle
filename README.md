@@ -5,7 +5,7 @@ A ReactJS sliding puzzle with a solver and cat GIFs as your rewards.
 [![forthebadge](http://forthebadge.com/images/badges/contains-cat-gifs.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com)
 
 ## Live demo
-http://cedricblondeau.github.io/sliding-puzzle/
+https://cedricblondeau.github.io/sliding-puzzle/
 
 ## Solver algorithm
 The application uses [A* search algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm) with [Manhattan distance](https://en.wikipedia.org/wiki/Taxicab_geometry) heuristic to solve puzzles.
