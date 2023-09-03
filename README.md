@@ -2,7 +2,7 @@
 
 A ReactJS sliding puzzle with a solver and cat GIFs as your rewards.
 
-[![forthebadge](http://forthebadge.com/images/badges/contains-cat-gifs.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com)
+[![forthebadge](https://raw.githubusercontent.com/BraveUX/for-the-badge/master/src/images/badges/contains-cat-gifs.svg)](http://forthebadge.com) [![forthebadge](https://raw.githubusercontent.com/BraveUX/for-the-badge/master/src/images/badges/uses-js.svg)](http://forthebadge.com)
 
 ## Live demo
 https://cedricblondeau.github.io/sliding-puzzle/
